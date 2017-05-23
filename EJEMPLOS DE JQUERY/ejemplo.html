@@ -1,0 +1,885 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+	<title>pagina ejemplos</title>
+<script src="123a.js"></script>
+<script src="js/ejemplo.js"></script>
+<script>
+	$( document ).ready(function() {
+    console.log( "Listo el documento" );
+});
+//Una página no puede ser manipulado con seguridad hasta que el documento está "listo". jQuery detecta este estado de preparación para usted. Código que se incluye en el interior $( document ).ready()sólo funciona una vez que está listo para el código JavaScript para ejecutar el modelo de objetos de página de documento (DOM).
+</script>
+<!-- inclusion en jquery incluir ciertas versiones de librerias de jquery actualizadas con el link de la libreria es sufuciente para que pueda obtener la libreria actualizada-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script> -->
+<!--La sintaxis jQuery está hecha a medida para la selección de elementos HTML y realizar alguna acción sobre el elemento (s).
+Sintaxis básica es: $ ( selector ). acción ()
+Sintaxis básica es: $ ( selector ). acción ()
+
+Un signo $ para definir / jQuery acceso
+A ( Selector ) a "consulta (o encontrar)" elementos HTML
+A jQuery acción () para ser realizado en el elemento (s)
+Ejemplos:
+-->
+<script>
+$ (This).hide ();
+<!-- oculta el elemento actual.-->
+
+$ ( "P").hide (); <!--. Oculta todos los elementos <p>.-->
+
+$ ( ".prueba").hide (); <!-- Oculta todos los elementos con class ="prueba" -->
+
+$ ("#prueba").hide(): <!-- Esconde el elemento con id = "prueba".-->	
+</script>
+<script >
+	
+	/*selectores de jQuery le permiten seleccionar y manipular elemento (s) de HTML.
+
+selectores de jQuery se utilizan para "encontrar" (o seleccionar) elementos HTML basándose en su nombre, id, clases, tipos, atributos, valores de atributos y mucho más. Está basado en los existentes selectores CSS , y, además, tiene algunos selectores personalizados propios.
+*/
+
+	$(document).ready(function(){
+    $("button").click(function(){
+        $("p").hide();
+    });
+});
+</script>
+<script>
+	//eventos
+	/*click
+	Enlazar un controlador de eventos para el evento "click" JavaScript o desencadenar ese evento en un elemento.*/
+	$( "#target" ).click(function() {
+  alert( "Mensaje al darle click en el contexto del id de html" );
+});
+</script>
+<script >
+	//dblclick()
+	//enlazar un controlador de eventos al "dblclick" JavaScript evento o motivan dicho evento en un elemento.
+	$( "#target" ).dblclick(function() {
+  alert( "Mensaje al darle doble click en el contexto del id de html" );
+});
+
+</script>
+<script >
+	//mouseenter
+	//Este evento se envía a un elemento cuando el puntero del ratón entra en el elemento. Cualquier elemento HTML puede recibir este evento.
+	$( "#other" ).click(function() {
+  $( "#outer" ).mouseenter();
+});
+</script>
+<script >
+	//.mouseleave 
+//Descripción: enlazar un controlador de eventos que se activa cuando el ratón sale de un elemento, o motivan dicho manejador de un //elemento.
+$( "#other" ).click(function() {
+  $( "#outer" ).mouseleave();
+});
+</script>
+<script>
+	//keypress
+	/*Enlazar un controlador de eventos para el evento JavaScript "pulsación de tecla", o desencadenar ese evento en un elemento.*/
+	$( "#other" ).click(function() {
+  $( "#target" ).keypress();
+});
+</script>
+<script>
+	//keydown
+	/*enlazar un controlador de eventos para el evento JavaScript "keydown", o desencadenar ese evento en un elemento.*/
+	$( "#other" ).click(function() {
+  $( "#target" ).keydown();
+});
+</script>
+<script>
+	//keyup
+	//enlazar un controlador de eventos al "keyup" JavaScript evento o motivan dicho evento en un elemento.
+	$( "#other" ).click(function() {
+  $( "#target" ).keyup();
+});
+</script>
+<script>
+	// Enlazar un controlador de eventos al "enviar" evento JavaScript o desencadenar ese evento en un elemento.
+	$( "#other" ).click(function() {
+  $( "#target" ).submit();
+});
+</script>
+<script>
+	//Enlazar un controlador de eventos para el evento "cambio" JavaScript o desencadenar ese evento en un elemento.
+	$( "#other" ).click(function() {
+  $( ".target" ).change();
+});
+</script>
+<script>
+	// enlazar un controlador de eventos para el evento "enfoque" JavaScript o motivan dicho evento en un elemento.
+
+$( "#other" ).click(function() {
+  $( "#target" ).focus();
+});
+</script>
+<script>
+	// enlazar un controlador de eventos para el evento "enfoque" JavaScript o motivan dicho evento en un elemento.
+	$( "#other" ).click(function() {
+  $( "#target" ).focus();
+});
+</script>
+<script>
+	//enlazar un controlador de eventos para el evento JavaScript "desenfoque", o desencadenar ese evento en un elemento.
+	$( "#other" ).click(function() {
+  $( "#target" ).blur();
+});
+</script>
+<script>
+	//Enlazar un controlador de eventos para el evento JavaScript "carga".
+	//El loadevento es enviado a un elemento cuando y todos los sub-elementos han sido completamente cargado. Este evento puede ser enviado a cualquier elemento asociado a una URL: imágenes, scripts, marcos, marcos flotantes, y el windowobjeto.
+$( window ).load(function() {
+  // Run code
+});
+
+</script>
+<script>
+	//Este método es un método abreviado para .on('resize', handler)en la primera y segunda variantes, y .trigger( "resize" )en el tercero.
+
+//El resizeevento se envía al windowelemento cuando el tamaño de la ventana del navegador cambia:
+$( window ).resize(function() {
+  $( "#log" ).append( "<div>Handler for .resize() called.</div>" );
+});
+</script>
+<script>
+	//El scrollevento es enviado a un elemento cuando el usuario se desplaza a un lugar diferente en el elemento. Se aplica a los windowobjetos, sino también a los marcos desplazables y elementos con el overflow conjunto de propiedades CSS a scroll(o autocuando la altura o anchura explícita del elemento es menor que la altura o la anchura de su contenido).
+	$( "#other" ).click(function() {
+  $( "#target" ).scroll();
+});
+</script>
+<script>
+	//El unloadevento se envía al windowelemento cuando el usuario se desplaza fuera de la página. Esto podría significar una de muchas cosas. El usuario podría haber hecho clic en un enlace para salir de la página, o mecanografiado en una nueva dirección URL en la barra de direcciones. Los botones de avance y retroceso desencadenarán el evento. Al cerrar la ventana del navegador hará que el evento que se dispara. Incluso una recarga de la página en primer lugar crear un unloadevento.
+	$( window ).unload(function() {
+  return "Handler for .unload() called.";
+});
+</script>
+/* 
+Ejemplos jquery Forms
+*/
+<script>
+	//.blur():El blurevento se envía a un elemento cuando se pierde el foco. Originalmente, este evento sólo era aplicable para formar elementos, tales como <input>. En los navegadores recientes, el dominio del evento se ha ampliado para incluir todos los tipos de elementos. Un elemento puede perder el enfoque a través de comandos de teclado, como la tecla Tab, o mediante clics del ratón en otro lugar de la página.
+	$( "#other" ).click(function() {
+  $( "#target" ).blur();
+});
+
+	// .change() :El changeevento se envía a un elemento cuando su valor cambia. Este evento se limita a <input>elementos, <textarea>cajas y <select>elementos. Para cuadros de selección, casillas de verificación y botones de radio, el evento se dispara inmediatamente cuando el usuario realiza una selección con el ratón, pero para los otros tipos de elementos se aplazó el caso hasta que el elemento pierde el foco.
+$( ".target" ).change(function() {
+  alert( "Handler for .change() called." );
+});
+	//.focus() :El focusevento se envía a un elemento cuando se queda seleccionado. Este evento es implícitamente aplicable a un conjunto limitado de elementos, tales como elementos de formulario ( <input>, <select>, etc.) y enlaces ( <a href>). En las últimas versiones de navegadores, el evento se puede ampliar para incluir todos los tipos de elementos por establecer explícitamente el elemento de tabindexpropiedad. Un elemento puede obtener el foco a través de comandos de teclado, como la tecla Tab, o mediante clics del ratón sobre el elemento.
+//Elementos con enfoque generalmente se resaltan en alguna manera por el navegador, por ejemplo, con una línea de puntos que rodea el elemento. El enfoque se utiliza para determinar qué elemento es el primero en recibir eventos relacionados con el teclado.
+$( "#other" ).click(function() {
+  $( "#target" ).focus();
+});
+	//.focusin()
+//El focusinevento se envía a un elemento cuando ésta, o cualquier elemento dentro de ella, queda seleccionado. Esto es distinto del enfoque evento en que es compatible con la detección del evento se centran en los elementos primarios (en otras palabras, es compatible con burbujeo de eventos).
+
+$( "p" ).focusin(function() {
+  $( this ).find( "span" ).css( "display", "inline" ).fadeOut( 1000 );
+});
+
+	// .focusout()
+//El focusoutevento se envía a un elemento cuando ésta, o cualquier elemento dentro de ella, pierde el foco. Esto es distinto de la falta de definición de evento en que es compatible con la detección de la pérdida de concentración en elementos descendientes (en otras palabras, es compatible con burbujeo de evento).
+var focus = 0,
+  blur = 0;
+$( "p" )
+  .focusout(function() {
+    focus++;
+    $( "#focus-count" ).text( "focusout fired: " + focus + "x" );
+  })
+  .blur(function() {
+    blur++;
+    $( "#blur-count" ).text( "blur fired: " + blur + "x" );
+  });
+	// jquery.param()
+//Crear una representación serializada de una matriz, un objeto plano, o un objeto jQuery adecuado para su uso en una cadena de consulta URL o petición Ajax. En caso de que se pasa un objeto jQuery, debe contener elementos de entrada con propiedades de nombre / valor
+var myObject = {
+  a: {
+    one: 1,
+    two: 2,
+    three: 3
+  },
+  b: [ 1, 2, 3 ]
+};
+var recursiveEncoded = $.param( myObject );
+var recursiveDecoded = decodeURIComponent( $.param( myObject ) );
+ 
+alert( recursiveEncoded );
+alert( recursiveDecoded );
+//.select()
+//El selectevento se envía a un elemento cuando el usuario realiza una selección de texto en su interior. Este evento se limita a <input type="text">los campos y <textarea>cajas.
+$( "#target" ).select(function() {
+  alert( "Handler for .select() called." );
+});
+// .serialize()
+//El .serialize()método crea una cadena de texto en notación estándar de codificación URL. Se puede actuar sobre un objeto jQuery que ha seleccionado controles de formulario individuales, tales como <input>, <textarea>, y <select>:$( "input, textarea, select" ).serialize();
+
+
+$( "form" ).on( "submit", function( event ) {
+  event.preventDefault();
+  console.log( $( this ).serialize() );
+});
+
+// .serializeArray()
+//El .serializeArray()método crea una matriz de JavaScript de objetos, listo para ser codificada como una cadena JSON. Opera en una colección jQuery de formS y / o de forma controles. Los controles pueden ser de varios tipos:
+$( "form" ).submit(function( event ) {
+  console.log( $( this ).serializeArray() );
+  event.preventDefault();
+});
+
+// .submit()
+//El submitevento es enviado a un elemento cuando el usuario está intentando enviar un formulario. Sólo puede estar unido a <form>elementos. Las formas pueden ser presentadas ya sea haciendo clic en un explícito <input type="submit">, <input type="image">o <button type="submit">, o pulsando Entercuando ciertos elementos de formulario tiene el foco.
+$( "#target" ).submit(function( event ) {
+  alert( "Handler for .submit() called." );
+  event.preventDefault();
+});
+// .val())
+//Cuando el primer elemento de la colección es una select-multiple(es decir, un selectelemento con el multipleconjunto de atributo), .val()devuelve una matriz que contiene el valor de cada opción seleccionada. A partir de jQuery 3.0 , si no se seleccionan opciones, devuelve una matriz vacía; antes de jQuery 3.0 , devuelve null.
+$.valHooks.textarea = {
+  get: function( elem ) {
+    return elem.value.replace( /\r?\n/g, "\r\n" );
+  }
+};// Efectos 
+</script>
+
+<script>
+//hide 
+//Ocultar los elementos emparejados.	
+$( "#clickme" ).click(function() {
+  $( "#book" ).hide( "slow", function() {
+    alert( "Animation complete." );
+  });
+});
+</script>
+<script>
+	//show
+	//mostrar los elementos emparejados.
+	$( "#clickme" ).click(function() {
+  $( "#book" ).show( "slow", function() {
+    // Animation complete.
+  });
+});
+</script>
+<script >
+	//fade
+	//fadein
+	//Muestra los elementos coincidentes por el desvanecimiento a opaco.
+// With the element initially hidden, we can show it slowly:
+$( "#clickme" ).click(function() {
+  $( "#book" ).fadeIn( "slow", function() {
+    // Animation complete
+  });
+});
+//fadeout
+//Ocultar los elementos coincidentes por el desvanecimiento a transparente.
+$( "#clickme" ).click(function() {
+  $( "#book" ).fadeOut( "slow", function() {
+    // Animation complete.
+  });
+});
+//fadeTo
+$( "#clickme" ).click(function() {
+  $( "#book" ).fadeTo( "slow" , 0.5, function() {
+    // Animation complete.
+  });
+});
+//slideDown()
+// Muestra los elementos coincidentes con un movimiento deslizante.
+$( "#clickme" ).click(function() {
+  $( "#book" ).slideDown( "slow", function() {
+    // Animation complete.
+  });
+});
+//slideUp
+//Ocultar los elementos coincidentes con un movimiento deslizante.
+$( "#clickme" ).click(function() {
+  $( "#book" ).slideUp( "slow", function() {
+    // Animation complete.
+  });
+});
+//slideToggle
+//Mostrar u ocultar los elementos emparejados con un movimiento deslizante.
+$( "#clickme" ).click(function() {
+  $( "#book" ).slideToggle( "slow", function() {
+    // Animation complete.
+  });
+});
+// animate
+//Realizar una animación personalizada de un conjunto de propiedades de CSS.
+$( "#clickme" ).click(function() {
+  $( "#book" ).animate({
+    opacity: 0.25,
+    left: "+=50",
+    height: "toggle"
+  }, 5000, function() {
+    // Animation complete.
+  });
+});
+//stop
+//Detener la animación actualmente en ejecución en los elementos coincidentes.
+$( "#hoverme-stop-2" ).hover(function() {
+  $( this ).find( "img" ).stop( true, true ).fadeOut();
+}, function() {
+  $( this ).find( "img" ).stop( true, true ).fadeIn();
+});
+
+// ajax
+//load 
+//El método de carga jQuery () es un simple, pero poderoso método AJAX. Los datos de carga () carga de método desde un servidor y pone los datos devueltos en el elemento seleccionado.
+$("button").click(function(){
+    $("#div1").load("demo_test.txt", function(responseTxt, statusTxt, xhr){
+        if(statusTxt == "success")
+            alert("External content loaded successfully!");
+        if(statusTxt == "error")
+            alert("Error: " + xhr.status + ": " + xhr.statusText);
+    });
+});
+
+//get -- post
+//El jQuery get () y post () métodos se utilizan para solicitar datos al servidor con una petición HTTP GET o POST.
+$("button").click(function(){
+    $.post("demo_test_post.asp",
+    {
+        name: "Donald Duck",
+        city: "Duckburg"
+    },
+    function(data, status){
+        alert("Data: " + data + "\nStatus: " + status);
+    });
+});
+//interacciones
+//dragg
+//permitir que los elementos se muevan con el ratón.
+var addClasses = $( ".selector" ).draggable( "option", "addClasses" );
+ 
+// Setter
+$( ".selector" ).draggable( "option", "addClasses", false );
+// drop
+//Creación de orientaciones para los elementos que pueden arrastrarse.
+// Getter
+var accept = $( ".selector" ).droppable( "option", "accept" );
+ 
+// Setter
+$( ".selector" ).droppable( "option", "accept", ".special" );
+//Resizable
+// Cambiar el tamaño de un elemento con el ratón.
+$( ".selector" ).resizable({
+  alsoResize: "#mirror"
+});
+//Selectable+
+//Utiliza el ratón para seleccionar los elementos, de forma individual o en grupo.
+$( ".selector" ).selectable({
+  autoRefresh: false
+});
+//
+//soportable
+//	Reordenar elementos de una lista o rejilla utilizando el ratón.
+$( ".selector" ).sortable({
+  axis: "x"
+});
+
+//Accordion 
+//Convertir un par de colectores y paneles de contenido en un acordeón.
+$( ".selector" ).accordion({
+  active: 2
+});
+// Getter
+var active = $( ".selector" ).accordion( "option", "active" );
+ 
+// Setter
+$( ".selector" ).accordion( "option", "active", 2 );
+
+//Autocomplete
+//Autocompletar permite a los usuarios buscar y seleccionar de una lista pre-pobladas de los valores a medida que escribe, el aprovechamiento de búsqueda y filtrado de forma rápida.
+
+$( ".selector" ).autocomplete({
+  classes: {
+    "ui-autocomplete": "highlight"
+  }
+});
+//Obtener o establecer una propiedad de la classesopción, después de la inicialización, aquí leyendo y cambiando la tematización de la ui-autocompleteclase:
+
+// Getter
+var themeClass = $( ".selector" ).autocomplete( "option", "classes.ui-autocomplete" );
+ 
+// Setter
+$( ".selector" ).autocomplete( "option", "classes.ui-autocomplete", "highlight" 
+
+	//button
+//	Especificar clases adicionales para añadir a los elementos del widget. Cualquiera de las clases especificadas en la sección de Tematización se puede utilizar como claves para anular su valor. Para obtener más información sobre esta opción, consulte el artículo de aprender acerca de la classesopción .
+
+//Ejemplos de código:
+//Inicializar el botón con la classesopción especificada, cambiando la tematización de la ui-buttonclase:
+$( ".selector" ).button({
+  classes: {
+    "ui-button": "highlight"
+  }
+});
+//Obtener o establecer una propiedad de la classesopción, después de la inicialización, aquí leyendo y cambiando la tematización de la ui-buttonclase:
+
+// Getter
+var themeClass = $( ".selector" ).button( "option", "classes.ui-button" );
+ 
+// Setter
+$( ".selector" ).button( "option", "classes.ui-button", "highlight" );
+
+//Checkboxradio
+//Convierte entradas de tipo radio y la casilla de verificación a los botones temable.
+$( ".selector" ).checkboxradio({
+  classes: {
+    "ui-checkboxradio": "highlight"
+  }
+});
+//Obtener o establecer una propiedad de la classesopción, después de la inicialización, aquí leyendo y cambiando la tematización de la ui-checkboxradioclase:
+// Getter
+var themeClass = $( ".selector" ).checkboxradio( "option", "classes.ui-checkboxradio" );
+ 
+// Setter
+$( ".selector" ).checkboxradio( "option", "classes.ui-checkboxradio", "highlight" );
+//controlGroup
+//conjunto de widgets Aspecto configurable de entrada.
+//$( ".selector" ).controlgroup({
+  classes: {
+    "ui-controlgroup": "highlight"
+  }
+});//
+//obtener o establecer una propiedad de la classesopción, después de la inicialización, aquí leyendo y cambiando la tematización de la ui-controlgroupclase:
+// Getter
+var themeClass = $( ".selector" ).controlgroup( "option", "classes.ui-controlgroup" );
+ 
+// Setter
+$( ".selector" ).controlgroup( "option", "classes.ui-controlgroup", "highlight" );
+
+//datepicker
+//Seleccione una fecha de un calendario emergente o en línea
+$.datepicker.setDefaults({
+  showOn: "both",
+  buttonImageOnly: true,
+  buttonImage: "calendar.gif",
+  buttonText: "Calendar"
+});
+//dialog
+//El contenido abierto en una superposición interactiva.
+$( "#dialog" ).dialog({
+  dialogClass: "no-close",
+  buttons: [
+    {
+      text: "OK",
+      click: function() {
+        $( this ).dialog( "close" );
+      }
+    }
+  ]
+});
+
+
+//efectos
+// addClass()
+//Agrega la clase especificada (es) para cada uno del conjunto de elementos emparejados, mientras que la animación de todos los cambios de estilo.
+<!--
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>addClass demo</title>
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css">
+  <style>
+  div {
+    width: 100px;
+    height: 100px;
+    background-color: #ccc;
+  }
+  .big-blue {
+    width: 200px;
+    height: 200px;
+    background-color: #00f;
+  }
+  </style>
+  <script src="//code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="//code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+</head>
+<body>
+ 
+<div></div>
+ 
+<script>
+$( "div" ).click(function() {
+  $( this ).addClass( "big-blue", 1000, "easeOutBounce" );
+});
+</script>
+ 
+</body>
+</html>
+-->
+<!---->
+
+
+</script>
+<script>
+// color animation
+	jQuery UI efectos núcleo añade la posibilidad de animar propiedades de color usando rgb(),  rgba(), valores hexadecimales, o incluso nombres de colores tales como "aqua". Sólo tiene que incluir el archivo efectos núcleo de jQuery UI y .animate() ganará el apoyo para los colores.
+
+Las siguientes propiedades son compatibles:
+
+backgroundColor
+borderBottomColor
+borderLeftColor
+borderRightColor
+borderTopColor
+color
+columnRuleColor
+outlineColor
+textDecorationColor
+textEmphasisColor
+Soporte para la animación del color viene del plugin de jQuery en color . El plug-in de color dispone de varias funciones para trabajar con colores. Para obtener la documentación completa, consulte la documentación de jQuery color .
+
+enlace de Clase Animaciones
+Si bien hay casos de uso para la animación directamente las propiedades de color individual, a menudo es un mejor enfoque para contener los estilos en una clase. jQuery UI proporciona algunos métodos que animará la adición o eliminación de una clase CSS, específicamente .addClass(), .removeClass(),  .toggleClass(), y .switchClass(). Estos métodos determinar automáticamente qué propiedades necesidad de cambiar y aplicar las animaciones apropiadas.
+
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Color Animation Demo</title>
+  <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css">
+  <style>
+  #elem {
+    color: #006;
+    background-color: #aaa;
+    font-size: 25px;
+    padding: 1em;
+    text-align: center;
+  }
+  </style>
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+</head>
+<body>
+ 
+<div id="elem">color animations</div>
+<button id="toggle">animate colors</button>
+ 
+<script>
+$( "#toggle" ).click(function() {
+  $( "#elem" ).animate({
+    color: "green",
+    backgroundColor: "rgb( 20, 20, 20 )"
+  });
+});
+</script>
+ 
+</body>
+</html>
+</script>
+<script >
+	//Easings
+	//Funciones de aceleración especifica la velocidad a la que avanza una animación en diferentes puntos dentro de la animación. naves núcleo de jQuery con dos easings: linear, que progresa a un ritmo constante a través de la animación, y swing(por defecto flexibilización de jQuery core), que avanza un poco más lento al principio y al final de la animación que lo hace en el medio de la animación. jQuery UI proporciona varias funciones de aceleración adicionales, que van desde las variaciones en el comportamiento de oscilación a efectos personalizados tales como rebote.
+
+//Algunos easings resultarán en valores negativos durante la animación. Dependiendo de las propiedades que se están animados, el valor real se puede fijar en cero. Por ejemplo, puede animar lefta un valor negativo, pero no se puede animar heighto opacityen un valor negativo.
+
+//La mejor manera de entender cómo una flexibilización afectará una animación es ver la ecuación representada gráficamente en el tiempo. Vea a continuación un gráfico de todas las animaciones disponibles en jQuery UI.
+
+//effect()
+//Aplicar un efecto de animación a un elemento.
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>effect demo</title>
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css">
+  <style>
+  div {
+    width: 100px;
+    height: 100px;
+    background: #ccc;
+    border: 1px solid #000;
+  }
+  </style>
+  <script src="//code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="//code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+</head>
+<body>
+ 
+<p>Click anywhere to apply the effect.</p>
+<div></div>
+ 
+<script>
+$( document ).click(function() {
+  $( "div" ).effect( "bounce", "slow" );
+});
+</script>
+ 
+</body>
+</html>
+
+</script>
+<script>
+	//.hide()
+	// Ocultar los elementos coincidentes, el uso de efectos personalizados.
+	<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>hide demo</title>
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css">
+  <style>
+  div {
+    width: 100px;
+    height: 100px;
+    background: #ccc;
+    border: 1px solid #000;
+  }
+  </style>
+  <script src="//code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="//code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+</head>
+<body>
+ 
+<button>hide the div</button>
+<div></div>
+ 
+<script>
+$( "button" ).click(function() {
+  $( "div" ).hide( "drop", { direction: "down" }, "slow" );
+});
+</script>
+ 
+</body>
+</html>
+
+</script>
+<script>
+	//removeClass()
+	//Elimina la clase especificada (es) de cada uno del conjunto de elementos emparejados, mientras que la animación de todos los cambios de estilo.
+	<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>removeClass demo</title>
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css">
+  <style>
+  div {
+    width: 100px;
+    height: 100px;
+    background-color: #ccc;
+  }
+  .big-blue {
+    width: 200px;
+    height: 200px;
+    background-color: #00f;
+  }
+  </style>
+  <script src="//code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="//code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+</head>
+<body>
+ 
+<div class="big-blue"></div>
+ 
+<script>
+$( "div" ).click(function() {
+  $( this ).removeClass( "big-blue", 1000, "easeInBack" );
+});
+</script>
+ 
+</body>
+</html>
+</script>
+<script>
+	//.show()
+	//Muestra los elementos coincidentes, el uso de efectos personalizados.
+	<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>show demo</title>
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css">
+  <style>
+  div {
+    display: none;
+    width: 100px;
+    height: 100px;
+    background: #ccc;
+    border: 1px solid #000;
+  }
+  </style>
+  <script src="//code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="//code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+</head>
+<body>
+ 
+<button>show the div</button>
+<div></div>
+ 
+<script>
+$( "button" ).click(function() {
+  $( "div" ).show( "fold", 1000 );
+});
+</script>
+ 
+</body>
+</html>
+</script>
+<script>
+	//.switchClass()
+	 //añade y elimina la clase especificada (es) para cada uno del conjunto de elementos emparejados, mientras que la animación de todos los cambios de estilo.
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>switchClass demo</title>
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css">
+  <style>
+  div {
+    width: 100px;
+    height: 100px;
+    background-color: #ccc;
+  }
+  .big {
+    width: 200px;
+    height: 200px;
+  }
+  .blue {
+    background-color: #00f;
+  }
+  </style>
+  <script src="//code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="//code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+</head>
+<body>
+ 
+<div class="big"></div>
+ 
+<script>
+$( "div" ).click(function() {
+  $( this ).switchClass( "big", "blue", 1000, "easeInOutQuad" );
+});
+</script>
+ 
+</body>
+</html>
+
+
+</script>
+<script>
+	//.toggleClass()
+	// Añadir o quitar una o más clases de cada elemento en el conjunto de elementos coincidentes, dependiendo de la presencia de cualquiera de la clase o el valor del argumento interruptor, mientras que la animación de todos los cambios en el estilo.
+	<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>toggleClass demo</title>
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css">
+  <style>
+  div {
+    width: 100px;
+    height: 100px;
+    background-color: #ccc;
+  }
+  .big-blue {
+    width: 200px;
+    height: 200px;
+    background-color: #00f;
+  }
+  </style>
+  <script src="//code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="//code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+</head>
+<body>
+ 
+<div></div>
+ 
+<script>
+$( "div" ).click(function() {
+  $( this ).toggleClass( "big-blue", 1000, "easeOutSine" );
+});
+</script>
+ 
+</body>
+</html>
+</script>
+<script>
+	//temas y utilidades
+	//posicionar un elemento con respecto al otro.
+	<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>position demo</title>
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css">
+  <style>
+  #targetElement {
+    height: 200px;
+    margin: 50px;
+    background: #9cf;
+  }
+  .positionDiv {
+    position: absolute;
+    width: 75px;
+    height: 75px;
+    background: #080;
+  }
+  </style>
+  <script src="//code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="//code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+</head>
+<body>
+ 
+<div id="targetElement">
+  <div class="positionDiv" id="position1"></div>
+  <div class="positionDiv" id="position2"></div>
+  <div class="positionDiv" id="position3"></div>
+  <div class="positionDiv" id="position4"></div>
+</div>
+ 
+<script>
+$( "#position1" ).position({
+  my: "center",
+  at: "center",
+  of: "#targetElement"
+});
+ 
+$( "#position2" ).position({
+  my: "left top",
+  at: "left top",
+  of: "#targetElement"
+});
+ 
+$( "#position3" ).position({
+  my: "right center",
+  at: "right bottom",
+  of: "#targetElement"
+});
+ 
+$( document ).mousemove(function( event ) {
+  $( "#position4" ).position({
+    my: "left+3 bottom-3",
+    of: event,
+    collision: "fit"
+  });
+});
+</script>
+ 
+</body>
+</html>
+</script>
+<script>
+	//Widget Factory
+	//Crear plugins jQuery con estado utilizando la misma abstracción como todos los widgets jQuery UI.
+	_setOptions: function( options ) {
+  var that = this,
+    resize = false;
+ 
+  $.each( options, function( key, value ) {
+    that._setOption( key, value );
+    if ( key === "height" || key === "width" ) {
+      resize = true;
+    }
+  });
+ 
+  if ( resize ) {
+    this.resize();
+  }
+}
+</script>
+</head>
+<body>
+
+</body>
+</html>
